@@ -1,0 +1,250 @@
+﻿/* Detault Styles */
+html,body,form
+{
+    font-family:Verdana, Arial;
+    font-size:11px;
+    padding:0px 0px 0px 0px;
+    margin:0px 0px 0px 0px;
+    height:100%;
+}
+
+table {
+	border-width: 1px;
+	border-style: none; 
+
+}
+th {
+	border-width: 0px;
+	padding: 1px;
+	border-style: none;
+}
+
+
+td
+{
+    font-family:Verdana, Arial;
+    font-size:11px;
+    border-width: 0px;
+	padding: 1px;
+	border-style: none;
+}
+/* End Detault Styles */
+
+
+/* General Styles */
+.GridView 
+{
+    border-color:#6f2524;
+}
+
+.GridView a
+{
+    color:#6f2524;
+    text-decoration:none;
+}
+
+.GridView a:hover
+{
+    text-decoration:underline;
+}
+
+.GridView td
+{
+    padding:3px 5px 3px 5px;
+    border:1px solid #6f2524;
+}
+
+.GridView th
+{
+    padding:3px 5px 3px 5px;
+    Background-color:#f0e9cd;
+    font-weight:bold;
+    border:1px solid #6f2524;
+}
+
+.GridView tr.footer td
+{
+    Background-color:#f0e9cd;
+    font-weight:bold;
+}
+
+.AjaxOverlay
+{
+    position:absolute;
+    left:0;
+    top:0;
+    bottom:0;
+    width:100%;
+    background-color:Gray;
+  
+    /* filter:alpha(opacity=25);
+   -moz-opacity:0.25; 
+     -khtml-opacity: 0.25; 
+    opacity: 0.25; */
+        
+    text-align:center;
+    vertical-align:middle;
+    display:none;
+}
+
+
+.AjaxWindow
+{
+    background:#FFFFFF;
+    border:1px solid #000000;
+    padding:10px 10px 10px 10px;   
+   /* filter:alpha(opacity=100);
+    -moz-opacity:1;
+    opacity:1;*/
+    position:absolute;
+    top:100px;
+    display:none;
+}
+
+td.columnSpace
+{
+    width:25px;
+}
+
+.ErrorMessage
+{
+    color:Red;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+
+div.tabs a
+{
+    color:#FFFFFF;
+    font-weight:bold;
+    text-decoration:none;
+    text-align:center;
+    vertical-align:middle;
+    height:35px;
+    width:135px;
+    display:table-cell;
+    display:inline-block;
+    margin:0px 0px 0px 0px;
+    margin:0px 0px 0px 0px;
+    line-height:35px;
+}
+
+div.tabs a.tab_on
+{
+    background-image:url(../Images/tabon.gif);
+}
+
+div.tabs a.tab_off
+{
+    background-image:url(../Images/tab.gif);
+}
+
+.tab_display
+{
+    display:block;
+    
+}
+
+.tab_hide
+{
+    display:none;
+}
+
+.tabBackground
+{
+ border:1px solid #8f5251;
+ padding:10px 10px 10px 10px;   
+ background-color:#f8f6ed;
+}
+/* End General Styles */
+
+
+/* MasterPage Styles */
+div.Container
+{
+    padding:10px 20px 10px 20px;
+    margin:0px 0px 0px 0px;
+}
+
+
+div#PageContainer
+{
+    width:100%;
+    height:100%;
+}
+
+table#PageContainer
+{
+    width:100%;
+    height:100%;
+}
+
+div#PageBanner
+{
+	background-image: url("../Images/body_bg.jpg");
+    height:100px;
+}
+
+td#PageHeader
+{
+    height: 120px;
+}
+
+td#LeftNav
+{
+    width:170px;
+    padding:10px 20px 10px 20px;
+    margin:0px 0px 0px 0px;
+    background-color:#f0e9cd;
+    border-right:1px solid #6f2524;
+    height:100%;
+}
+
+td#LeftNav h3
+{
+    color:#3da3b8;
+    font-weight:bold;
+    font-size:14px;
+    
+    Margin:0px 0px 5px 0px;
+}
+
+td#LeftNav a
+{
+    display:block;
+    margin-left:10px;
+    margin-bottom:10px;
+    color:#872623;
+    text-decoration:none;
+}
+
+td#LeftNav a:hover
+{
+    text-decoration:underline;
+}
+
+div#mainNav
+{
+    background-color:#000000;
+    font-family:Arial, Verdana;
+    font-size:12px;
+    font-weight:bold;
+    color:#d4d5d7;
+    height:20px;
+}
+
+div#mainNav a
+{
+    font-family:Arial, Verdana;
+    color:#d4d5d7;
+    font-size:12px;
+    font-weight:bold;
+}
+
+div#pageTitle
+{
+    font-size:large;
+    font-weight:bold;
+}
+/* End MasterPage Styles */
+
