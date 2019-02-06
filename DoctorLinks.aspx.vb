@@ -23,6 +23,21 @@ Partial Class DoctorLinks
         End If
 
     End Sub
+    
+     Protected Sub btnSearch_Click(sender As Object, e As EventArgs) Handles btnSearch.Click
+        Dim strlname As String
+
+        strlname = txtSearch.Text.Trim
+
+        Dim aDT As New GridViewDataTier
+        With Me
+            Dim ds As New DataSet
+            ds = aDT.GetStudentByName(strlname)
+            .grdPhysician.DataSource = ds.Tables(0)
+            grdPhysician.DataBind()
+        End With
+    End Sub
+
     Private Sub LoadData()
         Dim aDatatier As New GridViewDataTier
         With Me
