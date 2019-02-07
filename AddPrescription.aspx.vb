@@ -16,6 +16,7 @@ Partial Class AddPrescription
         txtfrequency.Text = " "
         txtdocid.Text = " "
         txtpatid.Text = ""
+        txtdate.Text = ""
 
     End Sub
     Protected Sub btnsubmit_Click(sender As Object, e As EventArgs) Handles btnsubmit.Click
@@ -30,6 +31,7 @@ Partial Class AddPrescription
         freq = txtfrequency.Text.Trim
         phys_id = txtdocid.Text.Trim
         pat_id = txtpatid.Text.Trim
+        Pres_Date = Date.Parse(txtDate.Text.Trim)
 
 
         Dim adatatir As New AddDataTier
