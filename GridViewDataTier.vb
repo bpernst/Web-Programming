@@ -1,4 +1,3 @@
-﻿
 Imports Microsoft.VisualBasic
 Imports System.Data
 Imports System.Web
@@ -16,6 +15,80 @@ Public Class GridViewDataTier
     Dim cmdString As New SqlClient.SqlCommand
 
 
+    Public Function GetStudentByName(ByVal name As String) As DataSet
+
+        Try
+            connString.Open()
+            cmdString.Parameters.Clear()
+            cmdString.Connection = connString
+            cmdString.CommandType = CommandType.StoredProcedure
+            cmdString.CommandTimeout = 1500
+            cmdString.CommandText = "FINDPHYSICIANSBYID"
+
+            cmdString.Parameters.Add("@PHYSICIAN_ID", SqlDbType.VarChar, 25).Value = name
+
+            Dim aadapter As New SqlClient.SqlDataAdapter
+            aadapter.SelectCommand = cmdString
+            Dim adataset As New DataSet
+
+            aadapter.Fill(adataset)
+
+            Return adataset
+
+        Catch ex As Exception
+
+        End Try
+    End Function
+
+    Public Function GetpatByName(ByVal name As String) As DataSet
+
+        Try
+            connString.Open()
+            cmdString.Parameters.Clear()
+            cmdString.Connection = connString
+            cmdString.CommandType = CommandType.StoredProcedure
+            cmdString.CommandTimeout = 1500
+            cmdString.CommandText = "FINDPATIENTSBYID"
+
+            cmdString.Parameters.Add("@PATIENT_ID", SqlDbType.VarChar, 25).Value = name
+
+            Dim aadapter As New SqlClient.SqlDataAdapter
+            aadapter.SelectCommand = cmdString
+            Dim adataset As New DataSet
+
+            aadapter.Fill(adataset)
+
+            Return adataset
+
+        Catch ex As Exception
+
+        End Try
+    End Function
+
+    Public Function GetpresByid(ByVal name As String) As DataSet
+
+        Try
+            connString.Open()
+            cmdString.Parameters.Clear()
+            cmdString.Connection = connString
+            cmdString.CommandType = CommandType.StoredProcedure
+            cmdString.CommandTimeout = 1500
+            cmdString.CommandText = "GETPRESCRIPTIONBYID"
+
+            cmdString.Parameters.Add("@PRESCRIPTION_ID", SqlDbType.VarChar, 25).Value = name
+
+            Dim aadapter As New SqlClient.SqlDataAdapter
+            aadapter.SelectCommand = cmdString
+            Dim adataset As New DataSet
+
+            aadapter.Fill(adataset)
+
+            Return adataset
+
+        Catch ex As Exception
+
+        End Try
+    End Function
     Public Function GetPatients() As DataSet
 
         Try
@@ -96,8 +169,6 @@ Public Class GridViewDataTier
             connString.Close()
         End Try
     End Function
-
-
 
     Public Function GetPatientByID(ByVal PatientID As String) As DataSet
         Try
