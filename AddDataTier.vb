@@ -110,6 +110,7 @@ Public Class AddDataTier
                 .Parameters.Add("@FREQUENCY", SqlDbType.VarChar, 50).Value = frequency
                 .Parameters.Add("@PHYSICIAN_ID", SqlDbType.VarChar, 5).Value = phys_id
                 .Parameters.Add("@PATIENT_ID", SqlDbType.VarChar, 5).Value = pat_ID
+                .Parameters.Add("@PRESCRIBED_DATE", SqlDbType.Date).Value = pres_date
 
                 .ExecuteNonQuery()
             End With
